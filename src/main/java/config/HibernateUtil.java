@@ -1,5 +1,6 @@
 package config;
 
+import beans.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
