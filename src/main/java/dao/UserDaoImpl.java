@@ -27,7 +27,7 @@ public class UserDaoImpl implements UserDao{
         Criteria cr = sess.createCriteria(User.class);
         cr.setResultTransformer(DistinctRootEntityResultTransformer.INSTANCE);
         List<User> userList = cr.list();
-        System.out.println("in apt dao: \n" + userList);
+        System.out.println("in user dao: \n" + userList);
         sess.close();
         return userList;
     }
