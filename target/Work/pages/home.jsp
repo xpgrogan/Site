@@ -1,4 +1,4 @@
-<%--
+<%@ page import="service.UserService" %><%--
   Created by IntelliJ IDEA.
   User: Xavier
   Date: 8/20/2017
@@ -11,6 +11,10 @@
     <title>HOME</title>
 </head>
 <body>
-    <h2>HOWDY YALL</h2>
+    <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
+    <% UserService us = new UserService();%>
+    <div>
+        <%--<% us.getAllUsers();%>--%>
+    </div>
 </body>
 </html>
