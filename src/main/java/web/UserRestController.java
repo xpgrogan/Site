@@ -14,6 +14,9 @@ import com.google.gson.Gson;
 import service.UserService;
 import beans.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 @RequestMapping("/home")
 public class UserRestController {
@@ -21,19 +24,35 @@ public class UserRestController {
     @Autowired
     UserService us = new UserService();
 
-    @RequestMapping(method=RequestMethod.GET)
-    public @ResponseBody String login_JSON( @RequestBody String[] credentials, ModelMap modelMap, HttpSession session){
-        System.out.println("test");
-        User user = us.getUserById(1);
-        System.out.println("User's name: " + user.getFirst());
-        modelMap.addAttribute("user", user);
-        session.setAttribute("user", user);
-
-        if (modelMap.containsAttribute("user"))
-            System.out.println(user);
-
-        System.out.println("end of user rest controller");
-        String employeeJson = new Gson().toJson(user);
-        return employeeJson;
+//    @RequestMapping(value = "/", method = RequestMethod.GET)
+//    public String getDefaultUser(ModelMap model) {
+//
+//        model.addAttribute("fName", "xavier");
+//        model.addAttribute("lName", "grogan");
+//        return "list";
+//
+//    }
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public List getAllUsers()
+    {
+        List usersList = us.getAllUsers();
+        return usersList;
     }
+
+//    @RequestMapping(method=RequestMethod.GET)
+//    public @ResponseBody String login_JSON( @RequestBody String[] credentials, ModelMap modelMap, HttpSession session){
+//        System.out.println("test");
+//        User user = us.getUserById(1);
+//        System.out.println("User's name: " + user.getFirst());
+//        modelMap.addAttribute("userFirst", user.getFirst());
+//        modelMap.addAttribute("userLast", user.getLast());
+//        session.setAttribute("user", user);
+//
+//        if (modelMap.containsAttribute("user"))
+//            System.out.println(user);
+//
+//        System.out.println("end of user rest controller");
+//        String employeeJson = new Gson().toJson(user);
+//        return employeeJson;
+//    }
 }

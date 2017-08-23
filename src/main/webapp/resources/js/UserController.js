@@ -5,6 +5,6 @@ $(document).ready(function() {
         url: "home.jsp"
     }).then(function(data) {
         console.log("SUCCESS: ", data);
-        $("#user-id");
+        console.log("donezo!!!!");
     });
 });

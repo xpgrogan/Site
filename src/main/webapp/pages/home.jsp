@@ -15,8 +15,7 @@
 </head>
 <body>
     <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
-    <div>
-        <p class="user-id">The id is </p>
+    <div id="tester">
     </div>
     <br><br>
     <h3>AFTER THE DIV</h3>
