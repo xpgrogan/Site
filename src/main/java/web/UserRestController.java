@@ -15,7 +15,7 @@ import service.UserService;
 import beans.User;
 
 @RestController
-@RequestMapping("/UserRest")
+@RequestMapping("/home")
 public class UserRestController {
 
     @Autowired
@@ -24,7 +24,6 @@ public class UserRestController {
     @RequestMapping(method=RequestMethod.GET)
     public @ResponseBody String login_JSON( @RequestBody String[] credentials, ModelMap modelMap, HttpSession session){
         System.out.println("test");
-        System.out.println("should be username and password " + credentials[0] + credentials[1]);
         User user = us.getUserById(1);
         System.out.println("User's name: " + user.getFirst());
         modelMap.addAttribute("user", user);

@@ -10,10 +10,15 @@
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../resources/js/UserController.js" />
+    <script src="../resources/js/UserController.js"></script>
     <title>HOME</title>
 </head>
 <body>
     <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
+    <div>
+        <p class="user-id">The id is </p>
+    </div>
+    <br><br>
+    <h3>AFTER THE DIV</h3>
 </body>
 </html>
