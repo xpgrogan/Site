@@ -13,9 +13,11 @@ import config.HibernateUtil;
 
 public class UserDaoImpl implements UserDao{
 
+    HibernateUtil hu = new HibernateUtil();
+
     public User getUserById(int userId) {
         // TODO Auto-generated method stub
-        Session sess = HibernateUtil.getSession();
+        Session sess = hu.getSession();
         User user = (User) sess.get(User.class, userId);
         sess.close();
         return user;
@@ -23,9 +25,9 @@ public class UserDaoImpl implements UserDao{
 
     public List<User> getAllUsers() {
         // TODO Auto-generated method stub
-        Session sess = HibernateUtil.getSession();
+        Session sess = hu.getSession();
         Criteria cr = sess.createCriteria(User.class);
-        cr.setResultTransformer(DistinctRootEntityResultTransformer.INSTANCE);
+        //cr.setResultTransformer(DistinctRootEntityResultTransformer.INSTANCE);
         List<User> userList = cr.list();
         System.out.println("in user dao: \n" + userList);
         sess.close();
@@ -34,7 +36,7 @@ public class UserDaoImpl implements UserDao{
 
     public void addNewUser(User user) {
         // TODO Auto-generated method stub
-        Session sess = HibernateUtil.getSession();
+        Session sess = hu.getSession();
         Transaction tx;
         try
         {
@@ -53,7 +55,7 @@ public class UserDaoImpl implements UserDao{
     }
 
     public boolean updateUser(User user) {
-        Session sess = HibernateUtil.getSession();
+        Session sess = hu.getSession();
         Transaction tx;
 
         try {

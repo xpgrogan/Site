@@ -69,16 +69,21 @@
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.7.22</version>
     </dependency>
-      <dependency>
-          <groupId>hibernate</groupId>
-          <artifactId>hibernate</artifactId>
-          <version>3.0</version>
-      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>hibernate</groupId>-->
+          <!--<artifactId>hibernate</artifactId>-->
+          <!--<version>3.0</version>-->
+      <!--</dependency>-->
       <!-- Hibernate annotation -->
       <dependency>
           <groupId>hibernate-annotations</groupId>
           <artifactId>hibernate-annotations</artifactId>
       </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.1</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>Work</finalName>

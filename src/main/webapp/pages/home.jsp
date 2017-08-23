@@ -15,7 +15,7 @@
     <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
     <% UserService us = new UserService();%>
     <div>
-        <%--<% us.getAllUsers();%>--%>
+        <li> <% us.getUserById(1).toString();%> </li>
     </div>
 </body>
 </html>
