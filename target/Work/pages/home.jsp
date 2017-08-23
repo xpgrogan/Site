@@ -9,13 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../resources/js/UserController.js" />
     <title>HOME</title>
 </head>
 <body>
     <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
-    <% UserService us = new UserService();%>
-    <div>
-        <li> <% us.getUserById(1).toString();%> </li>
-    </div>
 </body>
 </html>
