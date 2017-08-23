@@ -9,15 +9,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>--%>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../resources/js/UserController.js"></script>
+    <script src="../resources/js/app.js"></script>
+        <script src="../resources/js/HelloController.js"></script>
     <title>HOME</title>
 </head>
-<body>
+<body ng-app="myApp">
     <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
-    <div id="tester">
+    <h3>BEFORE THE EXAMPLE</h3>
+    <div ng-controller="HelloController" >
+        <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
     </div>
-    <br><br>
-    <h3>AFTER THE DIV</h3>
+    <h3>AFTER THE EXAMPLE</h3>
 </body>
 </html>

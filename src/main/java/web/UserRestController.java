@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/home")
 public class UserRestController {
 
     @Autowired
@@ -36,6 +35,7 @@ public class UserRestController {
     public List getAllUsers()
     {
         List usersList = us.getAllUsers();
+        System.out.println(usersList);
         return usersList;
     }
 
