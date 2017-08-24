@@ -12,6 +12,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../resources/js/app.js"></script>
+    <script src="../resources/js/UserController.js"></script>
+    <script src="../resources/js/HelloController.js"></script>
     <title>HOME</title>
 </head>
 <body ng-app="myApp">
