@@ -14,11 +14,15 @@
     <script src="../resources/js/app.js"></script>
     <title>HOME</title>
 </head>
-<body>
+<body ng-app="myApp">
     <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
     <h3>BEFORE THE EXAMPLE</h3>
-    <div ng-app="myApp" ng-controller="HelloController" >
+    <div ng-controller="HelloController" >
         <h2>Welcome {{name}} to the world of Tutorialspoint!</h2>
+    </div>
+    <div ng-controller="UserController" >
+        <h2>Your username is {{user}}</h2>
+        <p>{{test()}}</p>
     </div>
     <h3>AFTER THE EXAMPLE</h3>
 </body>
