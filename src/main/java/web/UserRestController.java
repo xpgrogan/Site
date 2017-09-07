@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/home")
 public class UserRestController {
 
     @Autowired
@@ -31,12 +32,19 @@ public class UserRestController {
 //        return "list";
 //
 //    }
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public List getAllUsers()
-    {
-        List usersList = us.getAllUsers();
-        System.out.println(usersList);
-        return usersList;
+//    @RequestMapping(method = RequestMethod.GET)
+//    public List getAllUsers()
+//    {
+//        List usersList = us.getAllUsers();
+//        System.out.println(usersList);
+//        return usersList;
+//    }
+
+    @RequestMapping(method=RequestMethod.GET)
+    public @ResponseBody List<User> getAllUsers(){
+
+        List<User> users = us.getAllUsers();
+        return users;
     }
 
 //    @RequestMapping(method=RequestMethod.GET)
