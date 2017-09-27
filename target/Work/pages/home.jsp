@@ -20,7 +20,7 @@
     <h2>HOWDY YALL!!!!!!!!!!!!!</h2>
     <h3>BEFORE THE EXAMPLE</h3>
     <div ng-controller="HelloController" >
-        <h2>Welcome {{name}} to the world of Tutorialspoint!</h2>
+        <h2>Welcome {{name}} to the world of FATE!</h2>
     </div>
     <div ng-controller="UserController" >
         <h2>Your username is {{user}}</h2>
